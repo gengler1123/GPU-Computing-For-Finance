@@ -103,6 +103,14 @@ int main(int argc, char ** argv)
 	std::cout << "No Overhead Involved " << elapsed_secs_NoOver << std::endl;
 	std::cout << "Overhead Calculated " << elapsed_secs_GPU << std::endl;
 
+	for (int i = 0; i < N; i++)
+	{
+		if (h_C1[i] != h_C2[i])
+		{
+			std::cout << "Opps!" << std::endl;
+		}
+	}
+
 	cudaFree(d_A); cudaFree(d_B); cudaFree(d_C);
 
 	delete[] h_A; delete[] h_B; delete[] h_C1; delete[] h_C2;
