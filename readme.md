@@ -1,5 +1,7 @@
 Repository for GPU Computing for Finance
 
-"Course Code" should follow the syllabus, which is yet to be written.
+Weekly course material will be posted here, as well as other example code.
 
-"Example Code" should just include example codes as we develop them.  This should be our first focus.
+Book:
+* https://www.physics.drexel.edu/~valliere/PHYS405/GPU_Story/CUDA_by_Example_Addison_Wesley_Jul_2010.pdf
+
