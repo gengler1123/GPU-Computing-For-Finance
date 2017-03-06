@@ -52,6 +52,7 @@ __global__ void normalDist(
 	if (i < size)
 	{
 		d_a[i] = curand_normal(&states[i]);
+		d_a[i] = curand_
 	}
 }
 

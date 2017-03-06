@@ -48,8 +48,8 @@ __global__ void GeometricBrownianMotion(
 
 int main()
 {
-	float mu = 0;
-	float sigma = 0.2;
+	float mu = .01;
+	float sigma = 0.5;
 	float dt = 1/252.0f;
 
 	float h_a[N];
@@ -83,11 +83,7 @@ int main()
 
 	for (int i = 0; i < N; i++)
 	{
-		//std::cout << h_a[i] << std::endl;
-		if ((h_a[i]- 100.0) > 0)
-		{
-			avg += (h_a[i]-100);
-		}
+		avg += h_a[i];
 	}
 
 	avg /= float(N);

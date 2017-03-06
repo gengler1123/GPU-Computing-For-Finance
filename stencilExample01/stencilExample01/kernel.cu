@@ -51,6 +51,16 @@ __global__ void stencil02(
 		cache[0] = 0;
 		cache[c] = d_a[tid];
 	}
+	else if (tid == size - 1)
+	{
+		cache[c] = d_a[tid];
+		cache[c + 1] = 0;
+	}
+	else if (cid == 0)
+	{
+		cache[0] = d_a[tid - 1];
+		cache[c] = d_a[tid];
+	}
 	else if (cid < numThreads - 1) // What is Missing?
 	{
 		cache[c] = d_a[tid];
@@ -91,6 +101,11 @@ __global__ void stencil03(
 	{
 		cache[0] = 0;
 		cache[c] = d_a[tid];
+	}
+	else if (tid == size - 1)
+	{
+		cache[c] = d_a[tid];
+		cache[c + 1] = 0;
 	}
 	else if (cid < numThreads - 1) // What is Missing?
 	{
