@@ -109,7 +109,6 @@ int main()
 		{
 			
 			y = float(j)*dX;
-			std::cout << x << " , " << y << std::endl;
 			stochasticNeuron sN(15.0f,x, y);
 
 			Neurons.push_back(sN);
@@ -160,13 +159,10 @@ int main()
 	{
 		for (int i = 0; i < 11; i++)
 		{
-			std::cout << spikeCounts[t][i] << " ";
 			avg[i] += spikeCounts[t][i];
 		}
-		std::cout << std::endl;
 	}
 
-	std::cout << std::endl;
 
 	for (int i = 0; i < avg.size(); i++)
 	{

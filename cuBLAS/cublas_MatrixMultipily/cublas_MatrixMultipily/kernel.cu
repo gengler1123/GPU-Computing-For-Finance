@@ -8,8 +8,8 @@
 
 #define IDX2C(i,j,ld) (((j)*(ld)) + (i))
 
-const int m = 6;
-const int n = 5;
+const int m = 100;
+const int n = 125;
 
 
 

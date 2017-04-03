@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{83DC28BD-ACAE-4A1D-9CCF-E3B29CDB3B09}</ProjectGuid>
-    <RootNamespace>cuBLAS_DotProduct</RootNamespace>
+    <ProjectGuid>{EF3072DA-7828-41AE-971D-EB3DC8CEB2CB}</ProjectGuid>
+    <RootNamespace>LibExample</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
