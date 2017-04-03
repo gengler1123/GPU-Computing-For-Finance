@@ -117,5 +117,8 @@ int main(int argc, char** argv)
 	*/
 	cudaFree(d_a); cudaFree(d_b); cudaFree(d_c);
 
+
+	cudaDeviceReset();
+
     return 0;
 }

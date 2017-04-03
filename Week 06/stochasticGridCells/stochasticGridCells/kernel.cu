@@ -184,5 +184,9 @@ int main()
 
 	cudaFree(d_cnt); cudaFree(d_sN); cudaFree(d_states);
 
+
+	cudaDeviceReset();
+
+
     return 0;
 }

@@ -115,6 +115,8 @@ int main(int argc, char ** argv)
 
 	delete[] h_A; delete[] h_B; delete[] h_C1; delete[] h_C2;
 
+	cudaDeviceReset();
+
     return 0;
 }
 
