@@ -41,56 +41,56 @@ int main()
 
 	cudaStatus = cudaMallocHost(&h_a, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "1\n", cudaStatus);
 		goto Error;
 	}
 	cudaStatus = cudaMalloc((void**)&d_a, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "2\n", cudaStatus);
 		goto Error;
 	}
 
 	cudaStatus = cudaMallocHost(&h_b, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "3\n", cudaStatus);
 		goto Error;
 	}
 	cudaStatus = cudaMalloc((void**)&d_b, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "4\n", cudaStatus);
 		goto Error;
 	}
 
 	cudaStatus = cudaMallocHost(&h_c, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "5\n", cudaStatus);
 		goto Error;
 	}
 	cudaStatus = cudaMalloc((void**)&d_c, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "6\n", cudaStatus);
 		goto Error;
 	}
 
 	cudaStatus = cudaMallocHost(&h_d, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "7\n", cudaStatus);
 		goto Error;
 	}
 	cudaStatus = cudaMalloc((void**)&d_d, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "8\n", cudaStatus);
 		goto Error;
 	}
 
 	cudaStatus = cudaMallocHost(&h_e, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "9\n", cudaStatus);
 		goto Error;
 	}
 	cudaStatus = cudaMalloc((void**)&d_e, N * sizeof(float));
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "10\n", cudaStatus);
 		goto Error;
 	}
 
@@ -105,17 +105,17 @@ int main()
 
 	cudaStatus = cudaMemcpyAsync(d_a, h_a, N * sizeof(float), cudaMemcpyHostToDevice, stream1);
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "11\n", cudaStatus);
 		goto Error;
 	}
 	cudaStatus = cudaMemcpyAsync(d_b, h_b, N * sizeof(float), cudaMemcpyHostToDevice, stream2);
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "12\n", cudaStatus);
 		goto Error;
 	}
 	cudaStatus = cudaMemcpyAsync(d_c, h_c, N * sizeof(float), cudaMemcpyHostToDevice, stream3);
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "13\n", cudaStatus);
 		goto Error;
 	}
 
@@ -126,12 +126,12 @@ int main()
 
 	cudaStatus = cudaMemcpyAsync(h_d, d_d, N*sizeof(float), cudaMemcpyDeviceToHost, stream1);
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "14\n", cudaStatus);
 		goto Error;
 	}
 	cudaStatus = cudaMemcpyAsync(h_e, d_e, N*sizeof(float), cudaMemcpyDeviceToHost, stream2);
 	if (cudaStatus != cudaSuccess) {
-		fprintf(stderr, "Error code %d after launching addKernel!\n", cudaStatus);
+		fprintf(stderr, "15\n", cudaStatus);
 		goto Error;
 	}
 
