@@ -3,8 +3,11 @@
 #include <thrust/generate.h>
 #include <thrust/reduce.h>
 #include <thrust/functional.h>
+
+
 #include <algorithm>
 #include <cstdlib>
+#include <iostream>
 
 int main(void)
 {
@@ -16,6 +19,7 @@ int main(void)
 	thrust::device_vector<int> d_vec = h_vec;
 	int x = thrust::reduce(d_vec.begin(), d_vec.end(), 0, thrust::plus<int>());
 
+	std::cout << x << std::endl;
 
 	return 0;
 }

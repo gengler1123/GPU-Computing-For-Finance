@@ -26,16 +26,18 @@ int main()
 
 	std::cout << "The Sum Is " << sum << "." << std::endl;
 
+	thrust::device_vector<int> W(5, 1);
+
+	int inner = thrust::inner_product(V.begin(), V.end(), W.begin(), 0.0);
+
+	std::cout << "The inner product of V with W is " << inner << std::endl;
 
 
-	int inner = thrust::inner_product(V.begin(), V.end(), V.begin(), 0.0);
-
-	std::cout << "The inner product of V with itself is " << inner << std::endl;
 
 
-
-
-	thrust::device_vector<int>::iterator iter = thrust::max_element(V.begin(), V.end());
+	thrust::device_vector<int>::iterator iter = thrust::max_element(
+		V.begin(), 
+		V.end());
 
 	std::cout << "The maximum value is " << *iter << ", at " << iter - V.begin() << "." << std::endl;
 

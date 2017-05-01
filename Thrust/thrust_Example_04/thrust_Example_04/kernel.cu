@@ -19,7 +19,10 @@ struct saxpy_func
 };
 
 
-void saxpy_fast(float A, thrust::device_vector<float> &X, thrust::device_vector<float> &Y)
+void saxpy_fast(
+	float A, 
+	thrust::device_vector<float> &X, 
+	thrust::device_vector<float> &Y)
 {
 	thrust::transform(X.begin(), X.end(), Y.begin(), Y.begin(), saxpy_func(A));
 }
@@ -27,20 +30,25 @@ void saxpy_fast(float A, thrust::device_vector<float> &X, thrust::device_vector<
 
 int main()
 {
-	thrust::device_vector<float> X;
-	thrust::device_vector<float> Y;
+	thrust::host_vector<float> hX;
+	thrust::host_vector<float> hY;
 
 	for (int i = 0; i < 100; i++)
 	{
-		X.push_back(1);
-		Y.push_back(i);
+		hX.push_back(1);
+		hY.push_back(i);
 	}
+
+	thrust::device_vector<float> X = hX;
+	thrust::device_vector<float> Y = hY;
 
 	saxpy_fast(3, X, Y);
 
+	hY = Y;
+
 	for (int i = 0; i < 100; i++)
 	{
-		std::cout << Y[i] << std::endl;
+		std::cout << hY[i] << std::endl;
 	}
 
 }
