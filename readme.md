@@ -2,6 +2,8 @@ Repository for GPU Computing for Finance
 
 Weekly course material will be posted here, as well as other example code.
 
+Code can either be compiled in compatable versions of Microsoft Visual Studio, such as MVS 2013, or in Linux using the nvcc compiler.  The use of which is similar to the gcc compiler.
+
 Book:
 * https://www.physics.drexel.edu/~valliere/PHYS405/GPU_Story/CUDA_by_Example_Addison_Wesley_Jul_2010.pdf
 
