@@ -1,6 +1,6 @@
 # Repository for GPU Computing for Finance
 
-This repository started as a collection of code for the course at the Hanlon Financial Systems Lab at Stevens Institute of Technology FE-529: GPU Computing in Finance, taught by me (Gary Engler) in conjunction with Parisa Golbayani and Hanglei Zhao both of whom were Ph.D. students in Finacial Engineering at Stevens at the time.
+This repository started as a collection of code for the course at the Hanlon Financial Systems Lab at Stevens Institute of Technology FE-529: GPU Computing in Finance, taught by me (Gary Engler) in conjunction with Parisa Golbayani and Honglei Zhao both of whom were Ph.D. students in Finacial Engineering at Stevens at the time.
 
 After the initial course run, the repository sat unused, but I recently decided to begin working on the code again.  I've begun to reshape the order of the presentation to better suit how I feel one would progress in the material and it will continue to adapt as time goes on.  Further I will begin commenting the code, something I always tell people to do but infrequently do myself.
 
